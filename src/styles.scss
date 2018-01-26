@@ -1,0 +1,84 @@
+@import '~@angular/material/theming';
+@import './styles/general';
+@import './app/lessons/theming/custom_lesson_theme';
+
+// includes the core styles
+@include mat-core();
+
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+
+// for a darker look you can use mat-dark-theme instead
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+@include custom-lesson-theme($theme);
+
+// For quick reference, mixin implementations (in @angular/material _theming.scss):
+// mat-palette
+// @function mat-palette($base-palette, $default: 500, $lighter: 100, $darker: 700) {
+//   $result: map_merge($base-palette, (
+//     default: map-get($base-palette, $default),
+//     lighter: map-get($base-palette, $lighter),
+//     darker: map-get($base-palette, $darker),
+
+//     default-contrast: mat-contrast($base-palette, $default),
+//     lighter-contrast: mat-contrast($base-palette, $lighter),
+//     darker-contrast: mat-contrast($base-palette, $darker)
+//   ));
+
+//   // For each hue in the palette, add a "-contrast" color to the map.
+//   @each $hue, $color in $base-palette {
+//     $result: map_merge($result, (
+//       '#{$hue}-contrast': mat-contrast($base-palette, $hue)
+//     ));
+//   }
+
+//   @return $result;
+// }
+
+// mat-light-theme
+// @function mat-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+//   @return (
+//     primary: $primary,
+//     accent: $accent,
+//     warn: $warn,
+//     is-dark: false,
+//     foreground: $mat-light-theme-foreground,
+//     background: $mat-light-theme-background,
+//   );
+// }
+
+// angular-material-theme
+// @mixin angular-material-theme($theme) {
+//   @include mat-core-theme($theme);
+//   @include mat-autocomplete-theme($theme);
+//   @include mat-button-theme($theme);
+//   @include mat-button-toggle-theme($theme);
+//   @include mat-card-theme($theme);
+//   @include mat-checkbox-theme($theme);
+//   @include mat-chips-theme($theme);
+//   @include mat-table-theme($theme);
+//   @include mat-datepicker-theme($theme);
+//   @include mat-dialog-theme($theme);
+//   @include mat-expansion-panel-theme($theme);
+//   @include mat-form-field-theme($theme);
+//   @include mat-grid-list-theme($theme);
+//   @include mat-icon-theme($theme);
+//   @include mat-input-theme($theme);
+//   @include mat-list-theme($theme);
+//   @include mat-menu-theme($theme);
+//   @include mat-paginator-theme($theme);
+//   @include mat-progress-bar-theme($theme);
+//   @include mat-progress-spinner-theme($theme);
+//   @include mat-radio-theme($theme);
+//   @include mat-select-theme($theme);
+//   @include mat-sidenav-theme($theme);
+//   @include mat-slide-toggle-theme($theme);
+//   @include mat-slider-theme($theme);
+//   @include mat-stepper-theme($theme);
+//   @include mat-tabs-theme($theme);
+//   @include mat-toolbar-theme($theme);
+//   @include mat-tooltip-theme($theme);
+//   @include mat-snack-bar-theme($theme);
+// }

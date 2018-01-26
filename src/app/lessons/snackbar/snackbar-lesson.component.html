@@ -1,0 +1,10 @@
+<mat-form-field>
+  <input #messageInput
+         placeholder="Enter Message"
+         matInput>
+</mat-form-field>
+
+<button mat-raised-button
+        (click)="openSnackbar(messageInput.value)">
+  Open Snackbar
+</button>

@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = require("@angular/core");
+var i1 = require("./Paginator");
+var i2 = require("./DataTable");
+var styles_Paginator = [];
+var RenderType_Paginator = i0.ɵcrt({ encapsulation: 2, styles: styles_Paginator, data: {} });
+exports.RenderType_Paginator = RenderType_Paginator;
+function View_Paginator_0(_l) { return i0.ɵvid(0, [i0.ɵncd(null, 0)], null, null); }
+exports.View_Paginator_0 = View_Paginator_0;
+function View_Paginator_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "mfPaginator", [], null, null, null, View_Paginator_0, RenderType_Paginator)), i0.ɵdid(1, 573440, null, 0, i1.Paginator, [[2, i2.DataTable]], null, null)], null, null); }
+exports.View_Paginator_Host_0 = View_Paginator_Host_0;
+var PaginatorNgFactory = i0.ɵccf("mfPaginator", i1.Paginator, View_Paginator_Host_0, { inputMfTable: "mfTable" }, {}, ["*"]);
+exports.PaginatorNgFactory = PaginatorNgFactory;
+//# sourceMappingURL=Paginator.ngfactory.js.map

@@ -1,0 +1,42 @@
+<div class="mat-elevation-z4 m-t-24">
+  <mat-table [dataSource]="dataSource"
+             matSort>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef
+                       mat-sort-header>
+        Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let operator">
+        {{operator.name}}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <mat-header-cell *matHeaderCellDef
+                       mat-sort-header>
+        Category
+      </mat-header-cell>
+      <mat-cell *matCellDef="let operator">
+        {{operator.category}}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="views">
+      <mat-header-cell *matHeaderCellDef
+                       mat-sort-header>
+        Views
+      </mat-header-cell>
+      <mat-cell *matCellDef="let operator">
+        {{operator.views}}
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="['name', 'category', 'views']">
+
+    </mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['name', 'category', 'views']">
+
+    </mat-row>
+
+  </mat-table>
+  <mat-paginator [pageSize]="10"
+                 [pageSizeOptions]="[5,10,25]">
+  </mat-paginator>
+</div>

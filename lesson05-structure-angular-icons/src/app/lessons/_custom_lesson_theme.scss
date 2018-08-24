@@ -1,0 +1,17 @@
+@mixin custom-lesson-theme($theme) {
+  // $theme is a map of our color palette. You can extract the values
+  // from this map using sass built in map-get function.
+  // More info: http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .primary-text {
+    // We can now reference these theme colors within our template,
+    // If the theme changes in the future these will be automatically
+    // updated to match, making your styling more flexible.
+    color: mat-color($primary, darker, 0.7);
+  }
+}

@@ -1,0 +1,40 @@
+<h2>Progress Bars</h2>
+
+<h3>Determinate (Default)</h3>
+<mat-progress-bar [value]="loadingPercent"></mat-progress-bar>
+<mat-progress-bar [value]="loadingPercent"
+                  color="accent">
+</mat-progress-bar>
+<mat-progress-bar [value]="loadingPercent"
+                  color="warn">
+</mat-progress-bar>
+
+<h3>Indeterminate</h3>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
+<h3>Query</h3>
+<mat-progress-bar [mode]="queryMode"
+                  [value]="queryValue"></mat-progress-bar>
+
+<h3>Buffer</h3>
+<mat-progress-bar mode="buffer"
+                  [value]="loadingPercent"
+                  [bufferValue]="currentPlayback">
+</mat-progress-bar>
+
+<h2>Spinners</h2>
+
+<h3>Indeterminate (Default)</h3>
+<mat-spinner></mat-spinner>
+<mat-spinner color="accent"></mat-spinner>
+<mat-spinner color="warn"></mat-spinner>
+
+<h3>Determinate</h3>
+<mat-progress-spinner [value]="loadingPercent">
+</mat-progress-spinner>
+
+<h3>Determinate (fade out)</h3>
+<mat-progress-spinner *ngIf="loadingPercent < 100"
+                      [@fadeOut]="'in'"
+                      [value]="loadingPercent">
+</mat-progress-spinner>

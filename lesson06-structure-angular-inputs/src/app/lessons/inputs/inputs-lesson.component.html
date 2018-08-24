@@ -1,0 +1,73 @@
+<h2>Basic Input</h2>
+<mat-form-field>
+  <input matInput
+         placeholder="Hello World">
+</mat-form-field>
+
+<h2>FloatPlaceholder Always</h2>
+<mat-form-field floatPlaceholder="always">
+  <input matInput
+         placeholder="Hello World">
+</mat-form-field>
+
+<h2>FloatPlaceholder Never</h2>
+<mat-form-field floatPlaceholder="never">
+  <input matInput
+         type="email"
+         placeholder="Hello World">
+</mat-form-field>
+
+<h2>With TextArea</h2>
+<mat-form-field>
+  <textarea matInput
+            placeholder="Hello World"></textarea>
+</mat-form-field>
+
+<h2>Inputs with hints</h2>
+<mat-form-field>
+  <input matInput
+         ngModel
+         #demoInput="ngModel"
+         placeholder="Hello World">
+  <mat-hint>{{demoInput.value?.length}}/30</mat-hint>
+</mat-form-field>
+
+<h2>Inputs with multiple hints</h2>
+<mat-form-field>
+  <input matInput
+         placeholder="Hello World">
+  <mat-hint align="start">No special characters allowed.</mat-hint>
+  <mat-hint align="end">{{demoInput.value?.length}}/30</mat-hint>
+</mat-form-field>
+
+
+<h2>Inputs with errors</h2>
+<mat-form-field>
+  <input matInput
+         [(ngModel)]="password"
+         #passwordInput="ngModel"
+         placeholder="Password"
+         minlength="6"
+         maxlength="16"
+         required>
+  <mat-hint align="start">Password must be atleast 6 characters</mat-hint>
+  <mat-hint align="end">{{password.length}}/16</mat-hint>
+  <mat-error *ngIf="passwordInput.errors?.required">Password is required.</mat-error>
+  <mat-error *ngIf="passwordInput.errors?.minlength">6 characters minimum.</mat-error>
+</mat-form-field>
+
+<h2>Custom Error Strategies</h2>
+<mat-form-field>
+  <input matInput
+         [(ngModel)]="name"
+         [errorStateMatcher]="customErrorStateMatcher"
+         #nameInput="ngModel"
+         placeholder="User name"
+         minlength="6"
+         maxlength="16"
+         required>
+  <mat-hint align="start">Name must be atleast 6 characters</mat-hint>
+  <mat-hint align="end">{{name.length}}/16</mat-hint>
+  <mat-error *ngIf="nameInput.errors?.required">Name is required.</mat-error>
+  <mat-error *ngIf="nameInput.errors?.minlength">6 characters minimum.</mat-error>
+</mat-form-field>

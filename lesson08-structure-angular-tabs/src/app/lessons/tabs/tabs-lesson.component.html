@@ -1,0 +1,36 @@
+<!-- Tabs with routes -->
+<nav mat-tab-nav-bar>
+  <a *ngFor="let tab of tabRoutes; let i = index;"
+     mat-tab-link
+     [routerLink]="tab.path"
+     routerLinkActive
+     #rla="routerLinkActive"
+     [active]="rla.isActive">
+    Tab {{ i + 1 }}
+  </a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- <h2>Basic Tabs</h2>
+<mat-tab-group>
+  <mat-tab label="First Tab"> Some Content </mat-tab>
+  <mat-tab label="Second Tab"> More Content </mat-tab>
+</mat-tab-group>
+
+<h2>Tabs with Templates</h2>
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Custom
+      <strong>Tab</strong>
+    </ng-template>
+    <p> Some Content </p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>check_circle</mat-icon>
+    </ng-template>
+    <p> More Content </p>
+  </mat-tab>
+</mat-tab-group> -->

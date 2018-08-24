@@ -1,0 +1,19 @@
+// in order to test scrolling
+.lesson-content {
+  min-height: 1000px;
+  padding: 32px;
+
+  h2 {
+    margin-top: 26px;
+  }
+}
+
+.primary-header {
+  position: fixed;
+  top: 0;
+}
+
+.extended-header {
+  font-size: 34px;
+  padding: 100px 0 48px 32px;
+}

@@ -1,0 +1,59 @@
+<h2>Basic Datepicker</h2>
+
+<mat-form-field>
+  <input matInput
+         [matDatepicker]="myDatepicker">
+  <mat-datepicker-toggle matSuffix
+                         [for]="myDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatepicker></mat-datepicker>
+</mat-form-field>
+
+<h2>Start Date</h2>
+
+<mat-form-field>
+  <input matInput
+         [matDatepicker]="startDateDatepicker">
+  <mat-datepicker-toggle matSuffix
+                         [for]="startDateDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #startDateDatepicker
+                  [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+
+<h2>Starting View</h2>
+
+<mat-form-field>
+  <input matInput
+         [matDatepicker]="startViewDatepicker">
+  <mat-datepicker-toggle matSuffix
+                         [for]="startViewDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #startViewDatepicker
+                  startView="year"
+                  [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+
+
+<h2>Touch UI</h2>
+
+<mat-form-field>
+  <input matInput
+         [matDatepicker]="touchUIDatepicker">
+  <mat-datepicker-toggle matSuffix
+                         [for]="touchUIDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #touchUIDatepicker
+                  [touchUi]="true"
+                  [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+
+
+<h2>Min / Max</h2>
+
+<mat-form-field>
+  <input matInput
+         [matDatepicker]="validationDatepicker"
+         [min]="minDate"
+         [max]="maxDate">
+  <mat-datepicker-toggle matSuffix
+                         [for]="validationDatepicker"></mat-datepicker-toggle>
+  <mat-datepicker #validationDatepicker
+                  [startAt]="startDate"></mat-datepicker>
+</mat-form-field>

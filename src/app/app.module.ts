@@ -21,7 +21,7 @@ import { DataTableLessonModule } from './lessons/datatable/datatable-lesson.modu
 import { DatepickerLessonModule } from './lessons/datepicker/datepicker-lesson.module';
 import { DialogLessonModule } from './lessons/dialogs/dialog-lesson.module';
 import { ThemingLessonModule } from './lessons/theming/theming-lesson.module';
-import { DialogComponent } from './lessons/dialogs/dialog-lesson.component';
+import { DialogLessonComponent } from './lessons/dialogs/dialog-lesson.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -44,7 +44,7 @@ import { DialogComponent } from './lessons/dialogs/dialog-lesson.component';
     DialogLessonModule,
     ThemingLessonModule
   ],
-  entryComponents: [DialogComponent],
+  entryComponents: [DialogLessonComponent],
   providers: [LessonConfigService],
   bootstrap: [AppComponent]
 })

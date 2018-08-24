@@ -1,0 +1,31 @@
+mat-nav-list {
+  padding-top: 0;
+  a {
+    border-bottom: 1px solid #f3f3f3;
+    &.active-lesson {
+      background: rgba(#ff4081, 0.6);
+      color: white;
+    }
+  }
+}
+
+mat-sidenav-container {
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.lesson-wrapper {
+  padding: 0 16px;
+}
+
+.lesson-list-sidenav {
+  width: 300px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+}
+
+.sidenav-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  z-index: 4;
+}

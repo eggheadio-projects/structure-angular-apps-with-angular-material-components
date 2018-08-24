@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
-import { fromEvent } from 'rxjs/observable/fromEvent';
-import { Subject } from 'rxjs/Subject';
+import { fromEvent } from 'rxjs';
+import { Subject } from 'rxjs';
 import { LessonConfigService } from '../../shared/lesson-config.service';
 import { AppComponent } from '../../app.component';
 import { takeUntil } from 'rxjs/operators';

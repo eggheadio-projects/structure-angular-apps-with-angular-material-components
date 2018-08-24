@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = require("@angular/core");
+var i1 = require("@angular/common");
+var i2 = require("./DefaultSorter");
+var i3 = require("./DataTable");
+var styles_DefaultSorter = [];
+var RenderType_DefaultSorter = i0.ɵcrt({ encapsulation: 2, styles: styles_DefaultSorter, data: {} });
+exports.RenderType_DefaultSorter = RenderType_DefaultSorter;
+function View_DefaultSorter_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 0, "span", [["aria-hidden", "true"], ["class", "glyphicon glyphicon-triangle-top"]], null, null, null, null, null))], null, null); }
+function View_DefaultSorter_2(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 0, "span", [["aria-hidden", "true"], ["class", "glyphicon glyphicon-triangle-bottom"]], null, null, null, null, null))], null, null); }
+function View_DefaultSorter_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 5, "a", [["class", "text-nowrap"], ["style", "cursor: pointer"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.sort() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i0.ɵncd(null, 0), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_DefaultSorter_1)), i0.ɵdid(3, 16384, null, 0, i1.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_DefaultSorter_2)), i0.ɵdid(5, 16384, null, 0, i1.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.isSortedByMeAsc; _ck(_v, 3, 0, currVal_0); var currVal_1 = _co.isSortedByMeDesc; _ck(_v, 5, 0, currVal_1); }, null); }
+exports.View_DefaultSorter_0 = View_DefaultSorter_0;
+function View_DefaultSorter_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "mfDefaultSorter", [], null, null, null, View_DefaultSorter_0, RenderType_DefaultSorter)), i0.ɵdid(1, 114688, null, 0, i2.DefaultSorter, [i3.DataTable], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_DefaultSorter_Host_0 = View_DefaultSorter_Host_0;
+var DefaultSorterNgFactory = i0.ɵccf("mfDefaultSorter", i2.DefaultSorter, View_DefaultSorter_Host_0, { sortBy: "by" }, {}, ["*"]);
+exports.DefaultSorterNgFactory = DefaultSorterNgFactory;
+//# sourceMappingURL=DefaultSorter.ngfactory.js.map

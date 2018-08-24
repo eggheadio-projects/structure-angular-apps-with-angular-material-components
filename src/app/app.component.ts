@@ -8,7 +8,7 @@ import {
 } from '@angular/animations';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, Routes, NavigationEnd } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { pluck, map, filter, shareReplay } from 'rxjs/operators';
 import { LessonConfigService } from './shared/lesson-config.service';
 import { LESSON_ROUTES, LessonRoutes } from './lessons/lessons.routes';

@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
 import { MatDialogRef, MatDialog, MAT_DIALOG_DATA } from '@angular/material';
-import { of } from 'rxjs/observable/of';
-import { mergeMap } from 'rxjs/operators/mergeMap';
-import { filter } from 'rxjs/operators/filter';
+import { of } from 'rxjs';
+import { mergeMap, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'egm-dialog-lesson',
